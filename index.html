@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>js Projects </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title"> JS Projects </h1>
+    <div class="projects-grid">
+
+      <!-- Project 1: Color Circle -->
+      <div class="project-card">
+        <div class="card-border"></div>
+        <h2 class="project-title">Project 1</h2>
+        <h3 class="project-heading">Color Circle</h3>
+        <div class="project-content">
+          <div class="color-circle">
+            <div class="circle" id="colorCircle"></div>
+            <p class="description">Click the circle to change its color randomly.</p>
+            <button class="gradient-button" id="resetColorBtn">Reset Color</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Even/Odd Checker -->
+      <div class="project-card">
+        <div class="card-border"></div>
+        <h2 class="project-title">Project 2</h2>
+        <h3 class="project-heading">Even/Odd Checker</h3>
+        <div class="project-content">
+          <input type="number" id="numberInput" placeholder="Enter a number">
+          <button class="gradient-button" onclick="checkEvenOdd()">Check</button>
+          <div class="result" id="evenOddResult"></div>
+        </div>
+      </div>
+
+      <!-- Project 3: Prime Number Checker -->
+      <div class="project-card">
+        <div class="card-border"></div>
+        <h2 class="project-title">Project 3</h2>
+        <h3 class="project-heading">Prime Checker</h3>
+        <div class="project-content">
+          <input type="number" id="primeInput" placeholder="Enter a number">
+          <button class="gradient-button" onclick="checkPrime()">Check</button>
+          <div class="result" id="primeResult"></div>
+        </div>
+      </div>
+
+      <!-- Project 4: Interactive Counter -->
+      <div class="project-card">
+        <div class="card-border"></div>
+        <h2 class="project-title">Project 4</h2>
+        <h3 class="project-heading">Interactive Counter</h3>
+        <div class="project-content">
+          <button class="gradient-button" onclick="decrement()">-</button>
+          <span id="count">0</span>
+          <button class="gradient-button" onclick="increment()">+</button>
+        </div>
+      </div>
+
+      <!-- Project 5: Alert Checker -->
+<div class="project-card">
+  <div class="card-border"></div>
+  <h2 class="project-title">Project 5</h2>
+  <h3 class="project-heading">Alert Checker</h3>
+  <div class="project-content">
+    <button class="gradient-button" onclick="toggleAlerts()">
+      Alerts: <span id="alertStatus">OFF</span>
+    </button>
+    <div class="alert-buttons">
+      <button class="gradient-button" onclick="showSuccess()">Test Success</button>
+      <button class="gradient-button" onclick="showError()">Test Error</button>
+    </div>
+  </div>
+</div>
+
+      <!-- Project 6: Registration Form -->
+<div class="project-card">
+  <div class="card-border"></div>
+  <h2 class="project-title">Project 6</h2>
+  <h3 class="project-heading">Registration Form</h3>
+  <div class="project-content">
+    <form id="registrationForm">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Roll Number" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <textarea placeholder="Address" required></textarea>
+      <button class="gradient-button" type="submit">Register</button>
+    </form>
+    <div class="result" id="formResult"></div>
+  </div>
+</div>
+
+
+      <!-- Project 7: Grade Checker -->
+      <div class="project-card">
+        <div class="card-border"></div>
+        <h2 class="project-title">Project 7</h2>
+        <h3 class="project-heading">Grade Checker</h3>
+        <div class="project-content">
+          <input type="number" id="marksInput" placeholder="Enter marks (0-100)">
+          <button class="gradient-button" onclick="calculateGrade()">Check Grade</button>
+          <div class="result" id="gradeResult"></div>
+        </div>
+      </div>
+
+      <!-- Project 8: Square Calculator -->
+      <div class="project-card">
+        <div class="card-border"></div>
+        <h2 class="project-title">Project 8</h2>
+        <h3 class="project-heading">Square Calculator</h3>
+        <div class="project-content">
+          <input type="number" id="squareInput" placeholder="Enter a number">
+          <button class="gradient-button" onclick="calculateSquare()">Calculate</button>
+          <div class="result" id="squareResult"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Project 9: Password Strength Checker -->
+<div class="project-card">
+  <div class="card-border"></div>
+  <h2 class="project-title">Project 9</h2>
+  <h3 class="project-heading">Password Strength Checker</h3>
+  <div class="project-content">
+    <input type="password" id="passwordInput" placeholder="Enter Password">
+    <button class="gradient-button" onclick="checkPasswordStrength()">Check Strength</button>
+    <div class="result" id="passwordStrengthResult"></div>
+  </div>
+</div>
+<!-- Project 10: Basic Calculator -->
+<div class="project-card">
+  <div class="card-border"></div>
+  <h2 class="project-title">Project 10</h2>
+  <h3 class="project-heading">Basic Calculator</h3>
+  <div class="project-content">
+    <input type="number" id="calcNum1" placeholder="First Number">
+    <select id="calcOperator">
+      <option value="+">+</option>
+      <option value="-">−</option>
+      <option value="*">×</option>
+      <option value="/">÷</option>
+    </select>
+    <input type="number" id="calcNum2" placeholder="Second Number">
+    <button class="gradient-button" onclick="calculate()">Calculate</button>
+    <div class="result" id="calcResult"></div>
+  </div>
+</div>
+<style>
+    /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #00adb5;
+  --secondary: #393e46;
+  --accent: #aad8d3;
+  --dark: #222831;
+  --light: #eeeeee;
+  --gradient-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--gradient-bg);
+  background-size: 400% 400%;
+  color: var(--light);
+  min-height: 100vh;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 15px rgba(0, 173, 181, 0.2);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.project-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--light);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gradient-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--light);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 173, 181, 0.3);
+}
+
+.gradient-button:active {
+  transform: translateY(1px);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
+}
+
+.result {
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.color-circle .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid var(--glass-border);
+}
+
+.color-circle .circle:hover {
+  transform: scale(1.05);
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.counter button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+#alertMessage {
+  text-align: center;
+  color: var(--accent);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.prime-result.prime {
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.prime-result.not-prime {
+  color: #ff4d4d;
+  text-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+}
+
+/* Password Strength Indicator */
+#passwordStrengthResult {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#passwordStrengthResult::before {
+  content: "🔒 ";
+}
+
+/* Calculator Styling */
+#calcOperator {
+  appearance: none;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/16px 16px;
+  padding-right: 2.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .color-circle .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gradient-button {
+    width: 100%;
+  }
+}
+</style>
+<style>
+/* Custom Alert Styles */
+.alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.alert {
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transform: translateX(150%);
+  animation: slideIn 0.3s forwards;
+  border-left: 4px solid;
+}
+
+.alert.hide {
+  transform: translateX(150%);
+  opacity: 0;
+}
+
+.alert-success {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.alert-error {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+}
+
+.alert-close {
+  cursor: pointer;
+  margin-left: auto;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(150%); }
+  to { transform: translateX(0); }
+}
+
+.alert-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+</style>
+
+
+
+  <script>
+    // Color Circle
+    const colorCircle = document.getElementById('colorCircle');
+    const resetColorBtn = document.getElementById('resetColorBtn');
+    const originalColor = '#00adb5';
+
+    colorCircle.addEventListener('click', () => {
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+      colorCircle.style.backgroundColor = randomColor;
+    });
+
+    resetColorBtn.addEventListener('click', () => {
+      colorCircle.style.backgroundColor = originalColor;
+    });
+
+    // Even/Odd Checker
+    function checkEvenOdd() {
+      const number = parseInt(document.getElementById('numberInput').value);
+      const result = number % 2 === 0 ? 'Even' : 'Odd';
+      document.getElementById('evenOddResult').textContent = `${number} is ${result}`;
+    }
+
+    // Prime Checker
+    function checkPrime() {
+      const num = parseInt(document.getElementById('primeInput').value);
+      const isPrime = num > 1 && Array.from({length: Math.sqrt(num)|0}, (_,i) => i+2).every(i => num % i);
+      document.getElementById('primeResult').textContent = isPrime ? 'Prime Number' : 'Not a Prime';
+    }
+
+    // Counter
+    let count = 0;
+    function updateCount() {
+      document.getElementById('count').textContent = count;
+    }
+    function increment() { count++; updateCount(); }
+    function decrement() { count--; updateCount(); }
+
+    
+  let alertOn = false;
+
+  function toggleAlerts() {
+    alertOn = !alertOn;
+    const status = document.getElementById("alertStatus");
+    const message = document.getElementById("alertMessage");
+
+    if (alertOn) {
+      status.textContent = "ON";
+      message.textContent = "Alerts are now active! 🔔";
+    } else {
+      status.textContent = "OFF";
+      message.textContent = "Alerts have been turned off. 🔕";
+    }
+  }
+
+
+    // Registration Form
+    document.getElementById('registrationForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('formResult').textContent = 'Registration Successful!';
+    });
+
+    // Grade Checker
+    function calculateGrade() {
+      const marks = parseInt(document.getElementById('marksInput').value);
+      let grade = 'F';
+      if (marks >= 90) grade = 'A';
+      else if (marks >= 80) grade = 'B';
+      else if (marks >= 70) grade = 'C';
+      else if (marks >= 60) grade = 'D';
+      document.getElementById('gradeResult').textContent = `Grade: ${grade}`;
+    }
+
+    // Square Calculator
+    function calculateSquare() {
+      const number = parseFloat(document.getElementById('squareInput').value);
+      const square = number * number;
+      document.getElementById('squareResult').textContent = `${number}² = ${square}`;
+    }
+    // Password Strength Checker
+function checkPasswordStrength() {
+  const password = document.getElementById('passwordInput').value;
+  let strength = 'Weak';
+  if (password.length >= 8 && /[A-Z]/.test(password) &&
+      /[a-z]/.test(password) && /[0-9]/.test(password) &&
+      /[\W]/.test(password)) {
+    strength = 'Strong';
+  } else if (password.length >= 6 && /[A-Z]/.test(password) &&
+             /[a-z]/.test(password) && /[0-9]/.test(password)) {
+    strength = 'Medium';
+  }
+  document.getElementById('passwordStrengthResult').textContent = `Password Strength: ${strength}`;
+}
+
+  // Basic Calculator
+function calculate() {
+  const num1 = parseFloat(document.getElementById('calcNum1').value);
+  const num2 = parseFloat(document.getElementById('calcNum2').value);
+  const operator = document.getElementById('calcOperator').value;
+  let result = '';
+
+  if (isNaN(num1) || isNaN(num2)) {
+    result = 'Please enter valid numbers.';
+  } else {
+    switch (operator) {
+      case '+': result = num1 + num2; break;
+      case '-': result = num1 - num2; break;
+      case '*': result = num1 * num2; break;
+      case '/':
+        result = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+        break;
+      default: result = 'Invalid operation';
+    }
+  }
+
+  document.getElementById('calcResult').textContent = `Result: ${result}`;
+}
+
+const alertSystem = (() => {
+  const container = document.createElement('div');
+  container.className = 'alert-container';
+  document.body.appendChild(container);
+
+  function createAlert(message, type) {
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${type}`;
+    alert.innerHTML = `
+      <div class="alert-icon">${type === 'success' ? '✓' : '✗'}</div>
+      <div class="alert-message">${message}</div>
+      <div class="alert-close" onclick="this.parentElement.classList.add('hide')">×</div>
+    `;
+
+    container.appendChild(alert);
+    
+    setTimeout(() => {
+      alert.classList.add('hide');
+      setTimeout(() => alert.remove(), 300);
+    }, 3000);
+  }
+
+  return {
+    success: (message) => createAlert(message, 'success'),
+    error: (message) => createAlert(message, 'error')
+  };
+})();
+
+// Alert Checker Logic
+let alertsEnabled = false;
+
+function toggleAlerts() {
+  alertsEnabled = !alertsEnabled;
+  const statusElement = document.getElementById('alertStatus');
+  statusElement.textContent = alertsEnabled ? 'ON' : 'OFF';
+  
+  alertSystem[alertsEnabled ? 'success' : 'error'](
+    `Alerts turned ${alertsEnabled ? 'on' : 'off'}`
+  );
+}
+
+function showSuccess() {
+  if(alertsEnabled) alertSystem.success('This is a success message!');
+}
+
+function showError() {
+  if(alertsEnabled) alertSystem.error('This is an error message!');
+}
+
+  
+  </script>
+</body>
+</html>
